@@ -1,0 +1,17 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": null
+        } 
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "style.scss"
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "liveSassCompile.settings.generateMap": false
+}

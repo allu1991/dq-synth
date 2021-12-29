@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DQ Synth</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.min.css" >
+    <meta name="theme-color" content="#373737">
+    <meta name="Description" content="Drama Queen Comms synthwave">
+    <meta property="og:title" content="DQ Synth">
+    <meta property="og:description" content="Drama Queen Comms synthwave">
+    <meta property="og:image" content="images/social_share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://URL.fi/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://URL.fi/images/social_share.png">
+    <meta name="twitter:title" content="DQ Synth">
+    <meta name="twitter:description" content="Drama Queen Comms synthwave">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<!-- https://codepen.io/search/pens?q=synthwave -->
+
+<body>
+
+    
+
+    <!-- Hidden by default. Reveal when window loaded -->
+    <div id="root" class="hidden">
+
+        <div id="space-background" class="parallax-element" data-depth="0.12"></div>
+
+        <canvas id="space-canvas"></canvas>
+        <canvas id="grid-canvas"></canvas>
+
+        
+        <div id="film-grain" class=""></div>
+        <div id="vhs-effect" class=""></div>
+
+
+        <img id="star" src="images/star.svg" alt="" />
+
+
+        <div id="logo" class="parallax-element" data-depth="0.25">
+            <div class="inner">
+                <img id="logo-triangle" src="images/logo-triangle.png" alt="" />
+                <object id="logo-drama" data="images/logo-drama.svg" type="image/svg+xml" alt="DRAMA"></object>
+                
+                <div id="queen-wrapper">
+                    <img id="logo-queen" src="images/logo-queen.png" alt="" />
+                    <div id="queen-mask">
+                        <span id="queen-gloss"></span>
+                    </div>
+                    <div id="queen-blings" class="hidden">
+                        <span class="bling-single"></span>
+                        <span class="bling-single"></span>
+                        <span class="bling-single"></span>
+                        <span class="bling-single"></span>
+                        <span class="bling-single"></span>
+                    </div>
+                </div>
+
+                <object id="logo-comms" data="images/logo-comms.svg" type="image/svg+xml" alt="COMMS"></object>
+            </div>
+        </div>
+
+
+        <footer id="options" class="">
+
+            <div class="options-inner">
+
+                <button id="replay-btn" class="" aria-label="Replay animation" title="Replay animation">
+                    <img src="images/icon-replay.svg" alt="" />
+                </button>
+
+                <button id="settings-btn" class="" aria-label="Settings" title="Settings">
+                    <img src="images/icon-gear.svg" alt="" />
+                </button>
+
+            </div>
+
+
+
+            <aside id="settings-menu" class="hidden">
+                <div class="settings-borders"></div>
+                <div class="inner">
+                    <h2>Settings</h2>
+
+                    <p>General</p>
+
+                    <label class="label-container" id="settings-fullscreen">
+                        <span class="input-label">Fullscreen mode</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="label-container" id="settings-parallax">
+                        <span class="input-label">Parallax effect</span>
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <p>Graphics</p>
+
+                    <label class="label-container" id="settings-vhs-effect">
+                        <span class="input-label">VHS effect</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="label-container" id="settings-film-grain">
+                        <span class="input-label">Film grain</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <p>3D effects</p>
+
+                    <label class="label-container" id="settings-grid">
+                        <span class="input-label">Grid</span>
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="label-container" id="settings-space-warp">
+                        <span class="input-label">Space warp</span>
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="label-container" id="settings-warp-speed">
+                        <span class="input-label">Warp speed</span>
+                        <select name="select-speed" id="select-speed">
+                            <option value="speed-1">Normal</option>
+                            <option value="speed-2">Fast</option>
+                            <option value="speed-3">Very fast</option>
+                            <option value="speed-4">Light speed</option>
+                        </select>
+                    </label>
+                    
+                </div>
+            </aside>
+
+        </footer>
+
+
+        <!-- <div id="bg-grid-wrapper">
+
+            <div id="bg-grid"></div>
+
+            <div id="horizontal-lines">
+                <span class="h-lineset"></span>
+                <span class="h-lineset"></span>
+                <span class="h-lineset"></span>
+            </div>
+
+
+            <div id="horizontal-lines">
+                <div id="horizontal-lines-inner">
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                    <span class="h-line"></span>
+                </div>
+            </div>
+
+        </div> -->
+
+
+    </div>
+
+
+    <script src="scripts/gsap380.min.js"></script>
+	<script src="scripts/DrawSVGPlugin.min.js"></script>
+	<script src="scripts/GSDevTools.min.js"></script>
+    <script src="scripts/three.min.js"></script>
+    <script src="scripts/parallax.min.js"></script>
+
+	<script src="main.js"></script>
+    <script src="threeAnimation.js"></script>
+
+</body>
+</html>
