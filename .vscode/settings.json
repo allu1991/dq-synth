@@ -10,8 +10,9 @@
         "style.scss"
     ],
     "liveSassCompile.settings.autoprefix": [
-        "> 1%",
-        "last 2 versions"
+        ">0.25%",
+        "not ie 11",
+        "not op_mini all"
     ],
     "liveSassCompile.settings.generateMap": false
 }
