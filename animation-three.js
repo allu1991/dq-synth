@@ -3,19 +3,10 @@
 let sceneStars, camera, rendererStars, rendererGrid, star, stars, starGeo, gridMesh;
 
 
-// Create star particles. Used for updating instances through settings manu as well
-function createStars(starVelocity, starAcceleration) {
-    for(let i = 0; i < 3000; i++) {
-        star = new THREE.Vector3(
-            Math.random() * 600 - 300,
-            Math.random() * 600 - 300,
-            Math.random() * 600 - 300
-        );
-        star.velocity = starVelocity;
-        star.acceleration = starAcceleration;
-        starGeo.vertices.push(star);
-    }
-}
+// Set the global camera parameters
+camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 5, 300);
+camera.position.z = 1;
+camera.rotation.x = Math.PI/2;
 
 
 // Initialize Stars scene
@@ -24,10 +15,6 @@ function initStars() {
     sceneStars = new THREE.Scene();
 
     sceneStars.fog = new THREE.Fog( 0x3c017f, 30, 250 );
-
-    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 5, 300);
-    camera.position.z = 1;
-    camera.rotation.x = Math.PI/2;
 
     let canvasStars = document.querySelector("#space-canvas")
     
@@ -38,8 +25,19 @@ function initStars() {
     
     starGeo = new THREE.Geometry();
     
-    createStars(0.40, 0.005)
+    // Create star particles
+    for(let i = 0; i < 3000; i++) {
+        star = new THREE.Vector3(
+            Math.random() * 600 - 300,
+            Math.random() * 600 - 300,
+            Math.random() * 600 - 300
+        );
+        star.velocity = 0.40;
+        star.acceleration = 0.005;
+        starGeo.vertices.push(star);
+    }
 
+    // Set the star material
     let sprite = new THREE.TextureLoader().load( '../images/star-particle.png' );
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
@@ -63,10 +61,6 @@ function initGrid() {
     sceneGrid = new THREE.Scene();
 
     sceneGrid.fog = new THREE.Fog( 0x3c017f, 30, 150 );
-
-    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 5, 300);
-    camera.position.z = 1;
-    camera.rotation.x = Math.PI/2;
 
     let canvasGrid = document.querySelector("#grid-canvas")
         
