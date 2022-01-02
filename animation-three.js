@@ -38,7 +38,7 @@ function initStars() {
     
     starGeo = new THREE.Geometry();
     
-    createStars(0.45, 0.005)
+    createStars(0.40, 0.005)
 
     let sprite = new THREE.TextureLoader().load( '../images/star-particle.png' );
     let starMaterial = new THREE.PointsMaterial({
