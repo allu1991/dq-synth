@@ -151,29 +151,29 @@ initGrid()
 
 
 
-const setWarpSpeed = document.querySelector("#settings-warp-speed > select")
+// const setWarpSpeed = document.querySelector("#settings-warp-speed > select")
 
-setWarpSpeed.addEventListener("change", function(e) {
-    switch (e.target.value) {
-        case "speed-1":
-            createStars(0.45, 0.005)
-            // animate(); 
-            break;
-        case "speed-2":
-            createStars(0.85, 0.010)
-            // animate(); 
-            break;
-        case "speed-3":
-            createStars(1.25, 0.020)
-            // animate();
-            break;
-        case "speed-4":
-            createStars(2.00, 0.040)
-            // animate();
-            break;
-        default:
-            createStars(0.45, 0.005)
-            // animate(); 
-            break;
-    }
-})
+// setWarpSpeed.addEventListener("change", function(e) {
+//     switch (e.target.value) {
+//         case "speed-1":
+//             createStars(0.45, 0.005)
+//             // animate(); 
+//             break;
+//         case "speed-2":
+//             createStars(0.85, 0.010)
+//             // animate(); 
+//             break;
+//         case "speed-3":
+//             createStars(1.25, 0.020)
+//             // animate();
+//             break;
+//         case "speed-4":
+//             createStars(2.00, 0.040)
+//             // animate();
+//             break;
+//         default:
+//             createStars(0.45, 0.005)
+//             // animate(); 
+//             break;
+//     }
+// })

@@ -105,10 +105,10 @@ window.addEventListener("load", function() {
             if (e.target == setSpaceWarp) {
                 if (setSpaceWarp.checked) {
                     spaceCanvas.classList.remove("inactive")
-                    setWarpSpeed.parentElement.classList.remove("inactive")
+                    // setWarpSpeed.parentElement.classList.remove("inactive")
                 } else {
                     spaceCanvas.classList.add("inactive")
-                    setWarpSpeed.parentElement.classList.add("inactive")
+                    // setWarpSpeed.parentElement.classList.add("inactive")
                 }
             }
 
