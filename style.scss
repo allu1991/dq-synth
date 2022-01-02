@@ -402,27 +402,31 @@ select {
 #logo {
     top: initial !important;
     left: initial !important;
-    width: 90%;
+    width: auto;
     height: auto;
-    margin: 2.5rem 0;
-    max-width: calc(700px + 10vw);
-    max-height: calc(95vh - 5rem);
-    aspect-ratio: 1 / 0.75;
-    // max-height: 100vh;
-    // height: auto;
+    margin: 0;
+    max-height: 80vh;
     display: block;
-    position: relative;
+    position: absolute;
+    transform-style: flat !important; // Transformation fix for safari
+    // max-width: calc(700px + 10vw);
+    // max-height: calc(95vh - 5rem);
+    // aspect-ratio: 1 / 0.75;
+    // height: auto;
     // overflow: hidden;
     // background-color: rgba(150, 0, 0, 0.3);
 
     .inner {
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        // padding-bottom: 77%;
+        width: 90vw;
+        height: auto;
         display: flex;
         position: relative;
+        padding-bottom: 77%;
+        max-width: calc(700px + 10vw);
+        // max-height: 90vh;
+        // background-color: rgba(150, 0, 0, 0.3);
     }
 
     img, object {

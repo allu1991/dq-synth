@@ -2,19 +2,8 @@ window.addEventListener("load", function() {
 
     setTimeout ( function() {
 
-        // Reveal root when window fully loaded
-        document.querySelector("#root").classList.remove("hidden")
-
-
-        // Parallax
-        var scene = document.getElementById('root');
-        var parallax = new Parallax(scene, {
-            selector: '.parallax-element'
-        });
-
-
-
         // Define DOM elements
+        const theRoot = document.querySelector("#root")
         const settingsBtn = document.querySelector("#settings-btn")
         const settingsMenu = document.querySelector("#settings-menu")
         const setFullscreen = document.querySelector("#settings-fullscreen > input")
@@ -28,9 +17,20 @@ window.addEventListener("load", function() {
         const setWarpSpeed = document.querySelector("#settings-warp-speed > select")
         const setFilmGrain = document.querySelector("#settings-film-grain > input")
         const setVhsEffect = document.querySelector("#settings-vhs-effect > input")
-        
+
+
+        // Reveal root when window fully loaded
+        theRoot.classList.remove("hidden")
         
 
+        // Parallax
+        var scene = document.getElementById('root');
+        var parallax = new Parallax(scene, {
+            selector: '.parallax-element'
+        });
+        
+        
+        // Click events for all buttons
         document.addEventListener("click", function(e) {
 
             // Settings menu toggle visible/hidden
@@ -113,9 +113,6 @@ window.addEventListener("load", function() {
             }
 
         })
-
-        
-
 
 
     }, 100)
