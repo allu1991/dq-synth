@@ -38,7 +38,7 @@ function initStars() {
     }
 
     // Set the star material
-    let sprite = new THREE.TextureLoader().load( '/images/star-particle.png' );
+    let sprite = new THREE.TextureLoader().load( window.location.pathname + 'images/star-particle.png' );
     let starMaterial = new THREE.PointsMaterial({
         color: 0xaaaaaa,
         size: 0.8,
@@ -73,7 +73,7 @@ function initGrid() {
     let planeH = 200; // pixels 
     let numW = 10; // how many wide (50*50 = 2500 pixels wide)
     let numH = 10; // how many tall (50*50 = 2500 pixels tall)
-    let gridTexture = new THREE.TextureLoader().load('/images/bg-grid.png');
+    let gridTexture = new THREE.TextureLoader().load(window.location.pathname + 'images/bg-grid.png');
     gridTexture.wrapS = THREE.RepeatWrapping;
     gridTexture.wrapT = THREE.RepeatWrapping;
     gridTexture.repeat.set( 160, 160 );
